@@ -3,13 +3,16 @@ package com.demo.pojo.entity;
 import com.baomidou.mybatisplus.annotation.*;
 
 import java.io.Serializable;
+
+import com.demo.config.mybatis.AESTypeHandler;
+import com.demo.config.mybatis.SHA2TypeHandler;
 import lombok.Data;
 
 /**
  * 
  * @TableName user
  */
-@TableName(value ="user")
+@TableName(value ="user",autoResultMap = true)
 @Data
 public class User implements Serializable {
     /**
@@ -27,13 +30,13 @@ public class User implements Serializable {
     /**
      * 密码
      */
-    @TableField(value = "password")
+    @TableField(value = "password",typeHandler = SHA2TypeHandler.class)
     private String password;
 
     /**
      * 手机号码
      */
-    @TableField(value = "phone")
+    @TableField(value = "phone",typeHandler = AESTypeHandler.class)
     private String phone;
 
     /**

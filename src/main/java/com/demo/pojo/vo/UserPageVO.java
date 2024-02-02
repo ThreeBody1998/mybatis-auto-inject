@@ -1,16 +1,11 @@
 package com.demo.pojo.vo;
 
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.demo.pojo.custom.PageConverter;
 import com.demo.pojo.entity.User;
-import com.demo.service.baseInterface.PageInterface;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.ToString;
 import lombok.experimental.Accessors;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * description 用户分页VO
